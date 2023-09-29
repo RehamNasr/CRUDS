@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="crud">
+        <div class="header">
+            <h1>cruds</h1>
+            <p style="margin-top:10PX;margin-bottom:15PX;">create read update delete search</p>
+        </div>
+
+        <div class="inputs">
+            <input type="text" placeholder="title" id="title">
+            <div class="search">
+            <input onkeyup="get_price()" type="number" placeholder="price" id="price">
+            <input onkeyup="get_price()" type="number" placeholder="taxes" id="taxes">
+            <input onkeyup="get_price()" type="number" placeholder="ads" id="ads">
+            <input onkeyup="get_price()" type="text" placeholder="discount" id="discount">
+            <small id="small"></small>
+            </div>
+            <input type="number" placeholder="count" id="count">
+            <input type="text" placeholder="category" id="category"> 
+            <button id="submit">CREATE</button>
+
+            
+
+        </div>
+        <div class="content">
+            <input onkeyup="srachdata(this.value)" type="text" placeholder="search" id="search">
+             <div class="buttons">
+              <button onclick="searchtype(this.id)" id="stitle">Search By Title</button>
+              <button onclick="searchtype(this.id)" id="scategory">Search By Category</button>
+               
+
+             </div>
+             <div id="deletealldiv">
+              <button id="deleteall" onclick="deleteall()">DELETE ALL<span id="numproduct"></span></button>
+
+             </div>
+             <table>
+                <tr>
+                    <th>ID</th>
+                    <th>title</th>
+                    <th>price</th>
+                    <th>taxes</th>
+                    <th>ads</th>
+                    <th>discount</th>
+                    <th>total</th>
+                    <th>category</th>
+                    <th>update</th>
+                    <th>delete</th>
+                </tr>
+                <tbody id="tbody">
+                    <tr>
+                        <td>1</td>
+                        <td>samsungs20</td>
+                        <td>2000</td>
+                        <td>52</td>
+                        <td>52</td>
+                        <td>52</td>
+                        <td>52</td>
+                        <td>52</td>
+                        <td><button id="update">update</button></td>
+                        <td><button id="delete">delete</button></td>
+                    </tr>
+                </tbody>
+               </table>
+        </div>
+
+    </div>
+
+    <script src="index.js"></script>
+    
+</body>
+</html>
